@@ -14,6 +14,9 @@
 		740CD7EF2441C180009207D6 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD7EE2441C180009207D6 /* SourceEditorExtension.swift */; };
 		740CD7F12441C180009207D6 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CD7F02441C180009207D6 /* SourceEditorCommand.swift */; };
 		740CD7F62441C180009207D6 /* Generator.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 740CD7E92441C180009207D6 /* Generator.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7424309C24450385006FE463 /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424309B24450385006FE463 /* LineTests.swift */; };
+		742430AA24450844006FE463 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F9DDEB24431A0800E9F223 /* Line.swift */; };
+		742430AB24450869006FE463 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D3747C24426491001395DD /* Object.swift */; };
 		74D3747D24426491001395DD /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D3747C24426491001395DD /* Object.swift */; };
 		74F9DDE52443163700E9F223 /* Object+Representation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F9DDE42443163700E9F223 /* Object+Representation.swift */; };
 		74F9DDE72443164200E9F223 /* Object+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F9DDE62443164200E9F223 /* Object+Sample.swift */; };
@@ -28,6 +31,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 740CD7E82441C180009207D6;
 			remoteInfo = Generator;
+		};
+		7424309E24450385006FE463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 740CD7C72441C0F4009207D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 740CD7CE2441C0F4009207D6;
+			remoteInfo = SampleGenerator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,6 +68,10 @@
 		740CD7F02441C180009207D6 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		740CD7F22441C180009207D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		740CD7F32441C180009207D6 /* Generator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Generator.entitlements; sourceTree = "<group>"; };
+		7424309924450385006FE463 /* SampleGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7424309B24450385006FE463 /* LineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineTests.swift; sourceTree = "<group>"; };
+		7424309D24450385006FE463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		742430A324450556006FE463 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		74D3747C24426491001395DD /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		74F9DDE42443163700E9F223 /* Object+Representation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Representation.swift"; sourceTree = "<group>"; };
 		74F9DDE62443164200E9F223 /* Object+Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Object+Sample.swift"; sourceTree = "<group>"; };
@@ -81,6 +95,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7424309624450385006FE463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +110,7 @@
 			children = (
 				740CD7D12441C0F5009207D6 /* SampleGenerator */,
 				740CD7ED2441C180009207D6 /* Generator */,
+				7424309A24450385006FE463 /* SampleGeneratorTests */,
 				740CD7EA2441C180009207D6 /* Frameworks */,
 				740CD7D02441C0F5009207D6 /* Products */,
 			);
@@ -99,6 +121,7 @@
 			children = (
 				740CD7CF2441C0F5009207D6 /* SampleGenerator.app */,
 				740CD7E92441C180009207D6 /* Generator.appex */,
+				7424309924450385006FE463 /* SampleGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +141,7 @@
 		740CD7EA2441C180009207D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				742430A324450556006FE463 /* XcodeKit.framework */,
 				740CD7EB2441C180009207D6 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -135,6 +159,15 @@
 				740CD7F32441C180009207D6 /* Generator.entitlements */,
 			);
 			path = Generator;
+			sourceTree = "<group>";
+		};
+		7424309A24450385006FE463 /* SampleGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				7424309B24450385006FE463 /* LineTests.swift */,
+				7424309D24450385006FE463 /* Info.plist */,
+			);
+			path = SampleGeneratorTests;
 			sourceTree = "<group>";
 		};
 		74F9DDE32443161F00E9F223 /* Object */ = {
@@ -186,6 +219,24 @@
 			productReference = 740CD7E92441C180009207D6 /* Generator.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
+		7424309824450385006FE463 /* SampleGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 742430A224450385006FE463 /* Build configuration list for PBXNativeTarget "SampleGeneratorTests" */;
+			buildPhases = (
+				7424309524450385006FE463 /* Sources */,
+				7424309624450385006FE463 /* Frameworks */,
+				7424309724450385006FE463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7424309F24450385006FE463 /* PBXTargetDependency */,
+			);
+			name = SampleGeneratorTests;
+			productName = SampleGeneratorTests;
+			productReference = 7424309924450385006FE463 /* SampleGeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +252,10 @@
 					};
 					740CD7E82441C180009207D6 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					7424309824450385006FE463 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 740CD7CE2441C0F4009207D6;
 					};
 				};
 			};
@@ -219,6 +274,7 @@
 			targets = (
 				740CD7CE2441C0F4009207D6 /* SampleGenerator */,
 				740CD7E82441C180009207D6 /* Generator */,
+				7424309824450385006FE463 /* SampleGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +290,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		740CD7E72441C180009207D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7424309724450385006FE463 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,6 +328,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7424309524450385006FE463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7424309C24450385006FE463 /* LineTests.swift in Sources */,
+				742430AB24450869006FE463 /* Object.swift in Sources */,
+				742430AA24450844006FE463 /* Line.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -272,6 +345,11 @@
 			isa = PBXTargetDependency;
 			target = 740CD7E82441C180009207D6 /* Generator */;
 			targetProxy = 740CD7F42441C180009207D6 /* PBXContainerItemProxy */;
+		};
+		7424309F24450385006FE463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 740CD7CE2441C0F4009207D6 /* SampleGenerator */;
+			targetProxy = 7424309E24450385006FE463 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -488,6 +566,46 @@
 			};
 			name = Release;
 		};
+		742430A024450385006FE463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z3544C935Q;
+				INFOPLIST_FILE = SampleGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sftnhrd.SampleGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleGenerator.app/Contents/MacOS/SampleGenerator";
+			};
+			name = Debug;
+		};
+		742430A124450385006FE463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Z3544C935Q;
+				INFOPLIST_FILE = SampleGeneratorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sftnhrd.SampleGeneratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SampleGenerator.app/Contents/MacOS/SampleGenerator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,6 +632,15 @@
 			buildConfigurations = (
 				740CD7F82441C180009207D6 /* Debug */,
 				740CD7F92441C180009207D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		742430A224450385006FE463 /* Build configuration list for PBXNativeTarget "SampleGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				742430A024450385006FE463 /* Debug */,
+				742430A124450385006FE463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

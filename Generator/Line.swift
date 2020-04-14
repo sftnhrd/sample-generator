@@ -67,13 +67,13 @@ private extension Line {
     func findProperty(_ line: String) -> Object.Property? {
         let words = findWords(line)
 
-        guard words.count == 3 else { return nil }
+        guard
+            let index = words.firstIndex(where: { propertyTypes.contains($0) }),
+            words.count == index + 3
+        else { return nil }
 
-        let constantType = words[0]
-        guard propertyTypes.contains(constantType) else { return nil }
-
-        let name = words[1]
-        let type = words[2]
+        let name = words[index + 1]
+        let type = words[index + 2]
 
         return .init(name: name, type: type)
     }
