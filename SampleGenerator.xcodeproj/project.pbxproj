@@ -17,6 +17,8 @@
 		7424309C24450385006FE463 /* LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7424309B24450385006FE463 /* LineTests.swift */; };
 		742430AA24450844006FE463 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F9DDEB24431A0800E9F223 /* Line.swift */; };
 		742430AB24450869006FE463 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D3747C24426491001395DD /* Object.swift */; };
+		749D3F3D260B95B6002A6837 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742430A324450556006FE463 /* XcodeKit.framework */; };
+		749D3F3E260B95B6002A6837 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 742430A324450556006FE463 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		74D3747D24426491001395DD /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D3747C24426491001395DD /* Object.swift */; };
 		74F9DDE52443163700E9F223 /* Object+Representation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F9DDE42443163700E9F223 /* Object+Representation.swift */; };
 		74F9DDE72443164200E9F223 /* Object+Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F9DDE62443164200E9F223 /* Object+Sample.swift */; };
@@ -51,6 +53,17 @@
 				740CD7F62441C180009207D6 /* Generator.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749D3F3F260B95B6002A6837 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				749D3F3E260B95B6002A6837 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -92,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				740CD7EC2441C180009207D6 /* Cocoa.framework in Frameworks */,
+				749D3F3D260B95B6002A6837 /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +223,7 @@
 				740CD7E52441C180009207D6 /* Sources */,
 				740CD7E62441C180009207D6 /* Frameworks */,
 				740CD7E72441C180009207D6 /* Resources */,
+				749D3F3F260B95B6002A6837 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
