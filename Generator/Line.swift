@@ -83,7 +83,16 @@ private extension Line {
     }
 
     func findWords(_ line: String) -> [String] {
-        let set = CharacterSet(charactersIn: ":").union(.whitespaces)
-        return line.components(separatedBy: set).filter { !$0.isEmpty }
+        let declarationAndType = line
+            .components(separatedBy: ":")
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
+
+        guard
+            let declaration = declarationAndType.first,
+            let type = declarationAndType.last
+        else { return [] }
+
+        return declaration.components(separatedBy: .whitespaces) + [type]
     }
 }

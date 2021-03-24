@@ -25,3 +25,18 @@ final class Object {
         self.parent = parent
     }
 }
+
+extension Object.Property {
+
+    private enum Constants {
+        static let closureRegex = try? NSRegularExpression(pattern: "->", options: [])
+    }
+
+    var isClosure: Bool {
+        Constants.closureRegex?.firstMatch(
+            in: type,
+            options: [],
+            range: NSRange(location: 0, length: (type as NSString).length)
+        ) != nil
+    }
+}
